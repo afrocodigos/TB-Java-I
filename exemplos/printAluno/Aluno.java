@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-class Aluno {
-    String nome;
-    String raca;
-    int idade;
+public class Aluno {
+    public String nome;
+    public String raca;
+    public int idade;
 
     public Aluno(String nomeAluno, String racaAluno, int idadeAluno){
         this.nome = nomeAluno;
