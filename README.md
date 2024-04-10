@@ -1,6 +1,8 @@
 # TB-Java-I
+
 Turma Backend Java I
 
-## Desafios
+### Desafios
 
-*** Na pasta aula I foi respondido o primeiro desafio proposto
+- Desafio 01 respondido
+- Desafio 02 respondido

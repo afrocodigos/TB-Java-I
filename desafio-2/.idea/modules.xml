@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/calculadora/calculadora.iml" filepath="$PROJECT_DIR$/calculadora/calculadora.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/desafio-02.iml" filepath="$PROJECT_DIR$/.idea/desafio-02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/verificar-triangulo/verificar-triangulo.iml" filepath="$PROJECT_DIR$/verificar-triangulo/verificar-triangulo.iml" />
+    </modules>
+  </component>
+</project>
