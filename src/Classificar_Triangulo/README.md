@@ -1,4 +1,4 @@
-Desafio 2: Verificação de Triângulo
+# Desafio : Verificação de Triângulo
 Crie uma classe chamada Triangulo que tenha os seguintes atributos:
 lado1 (double)
 lado2 (double)
