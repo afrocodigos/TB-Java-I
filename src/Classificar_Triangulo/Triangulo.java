@@ -6,10 +6,6 @@ public class Triangulo {
     private Double lado2;
     private Double lado3;
 
-    public Triangulo() {
-
-    }
-
     public Triangulo(Double lado1, Double lado2, Double lado3) {
         this.lado1 = lado1;
         this.lado2 = lado2;
@@ -41,17 +37,14 @@ public class Triangulo {
     }
 
     public String classificarTriangulo() {
+        if (lado1 == lado2 && lado2 == lado3) {
+            return "equilátero";
 
-        if (lado1 + lado2 > lado3 && lado2 + lado3 > lado1 && lado1 + lado3 > lado2) {
+        } else if (lado1 == lado2 || lado2 == lado3 || lado1 == lado3) {
+            return "isósceles";
+        } else if (lado1 != lado2 && lado2 != lado3) {
+            return "escaleno";
 
-            if (lado1 == lado2 && lado2 == lado3) {
-                return "equilatero";
-            } else if ((lado1 == lado2 && lado2 != lado3) || (lado2 == lado3 && lado1 != lado3)
-                    || (lado1 == lado3 && lado3 != lado2)) {
-                return "isosceles";
-            } else {
-                return "escaleno";
-            }
         } else {
             return "nao é triangulo";
         }

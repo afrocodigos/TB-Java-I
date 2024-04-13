@@ -2,8 +2,10 @@ package Classificar_Triangulo;
 
 public class App {
     public static void main(String[] args) {
-        var objeto = new Triangulo(1.0, 1.0, 1.0);
-        objeto.classificarTriangulo();
+        String tipo;
+        Triangulo triangulo = new Triangulo(3.0, 3.0, 3.0);
+        tipo = triangulo.classificarTriangulo();
+        System.out.println("O tipo do triângulo é: " + tipo);
     }
 
 }
