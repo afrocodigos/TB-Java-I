@@ -1,40 +1,40 @@
 package Calculadora;
 
 public class Calculadora {
-    private Double numberX;
-    private Double numberY;
+    private double numberX;
+    private double numberY;
 
-    public Calculadora(Double numberX, Double numberY) {
+    public Calculadora(double numberX, double numberY) {
         this.numberX = numberX;
         this.numberY = numberY;
     }
 
-    public Double getNumberX() {
+    public double getNumberX() {
         return numberX;
     }
 
-    public void setNumberX(Double numberX) {
+    public void setNumberX(double numberX) {
         this.numberX = numberX;
     }
 
-    public Double getNumberY() {
+    public double getNumberY() {
         return numberY;
     }
 
-    public void setNumberY(Double numberY) {
+    public void setNumberY(double numberY) {
         this.numberY = numberY;
     }
 
-    public Double somarValor() {
+    public double somarValor() {
         return numberX + numberY;
     }
 
-    public Double subtrairValor() {
+    public double subtrairValor() {
         return numberX - numberY;
     }
 
-    public Double dividirValor() {
-        Double result;
+    public double dividirValor() {
+        double result;
         result = numberX / numberY;
 
         if (result != 0) {
@@ -46,7 +46,7 @@ public class Calculadora {
 
     }
 
-    public Double multiplicarValor() {
+    public double multiplicarValor() {
         return numberX * numberY;
     }
 

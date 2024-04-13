@@ -10,10 +10,10 @@ public class Menu {
         Scanner read = new Scanner(System.in);
 
         System.out.println("Digite o valor 1:");
-        Double numberX = read.nextDouble();
+        double numberX = read.nextDouble();
         read.nextLine();
         System.out.println("Digite o valor 2:");
-        Double numberY = read.nextDouble();
+        double numberY = read.nextDouble();
         read.nextLine();
         Calculadora op = new Calculadora(numberX, numberY);
 
@@ -30,10 +30,10 @@ public class Menu {
         Scanner read = new Scanner(System.in);
 
         System.out.println("Digite o valor 1:");
-        Double numberX = read.nextDouble();
+        double numberX = read.nextDouble();
         read.nextLine();
         System.out.println("Digite o valor 2:");
-        Double numberY = read.nextDouble();
+        double numberY = read.nextDouble();
         read.nextLine();
         Calculadora op = new Calculadora(numberX, numberY);
         System.out.println("resultado: " + op.subtrairValor());
@@ -48,10 +48,10 @@ public class Menu {
         Scanner read = new Scanner(System.in);
 
         System.out.println("Digite o valor 1:");
-        Double numberX = read.nextDouble();
+        double numberX = read.nextDouble();
         read.nextLine();
         System.out.println("Digite o valor 2:");
-        Double numberY = read.nextDouble();
+        double numberY = read.nextDouble();
         read.nextLine();
         Calculadora op = new Calculadora(numberX, numberY);
         System.out.println("resultado : " + op.multiplicarValor());
@@ -65,10 +65,10 @@ public class Menu {
         Scanner read = new Scanner(System.in);
 
         System.out.println("Digite o valor 1:");
-        Double numberX = read.nextDouble();
+        double numberX = read.nextDouble();
         read.nextLine();
         System.out.println("Digite o valor 2:");
-        Double numberY = read.nextDouble();
+        double numberY = read.nextDouble();
         read.nextLine();
         Calculadora op = new Calculadora(numberX, numberY);
         System.out.println("resultado : " + op.dividirValor());
