@@ -16,21 +16,28 @@ public class Users {
         this.quantityBookLent = new ArrayList<>();
     }
 
-    public void bookLentIncreaseQuantity (Book book) {
+    public void lendBook (Book book) {
         quantityBookLent.add(book);
+        book.removeBookStock(1);
+        System.out.println("Emprestado");
     }
 
-    public void bookLentDecreaseQuantity (Book book){
+    public void giveBackBook (Book book){
         quantityBookLent.remove(book);
+        book.addBookStock(1);
+        System.out.println("Devolvido");
     }
 
-    @Override
-    public String toString(){
-        return "Usuario { " +
-                "Nome= '" + nome + '\'' +
-                "Id='" + id + '\'' +
-                "Quantidade de livros emprestados= " + quantityBookLent +
-                '}';
+    public int getId() {
+        return id;
+    }
+
+    public List<Book> getQuantityBookLent() {
+        return quantityBookLent;
+    }
+
+    public String getNome() {
+        return nome;
     }
 
 }

@@ -1,40 +1,47 @@
 package Biblioteca;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Book {
 
     public String title;
     public String author;
     public int yearPublished;
-    public String status;
-    public List<Integer> availableQuantity;
+    public int stock;
 
-    public Book(String title, String author, int yearPublished, int availableQuantity, String status) {
+
+    public Book(String title, String author, int yearPublished, int stock) {
         this.title = title;
         this.author = author;
         this.yearPublished = yearPublished;
-        this.availableQuantity = new ArrayList<>();
-        this.status = status;
+        this.stock = stock;
+
     }
 
     public void addBookStock (int quantity){
-            availableQuantity.add(quantity);
+            stock += quantity;
     }
 
     public void removeBookStock (int quantity){
-        availableQuantity.remove(quantity);
+        if(stock > 0){
+            stock -= quantity;
+        }else {
+            System.out.println("Quantidade indisponivel");
+        }
     }
 
-    @Override
-    public String toString(){
-        return "Livro{" +
-                "titulo='" + title + '\'' +
-                ", autor='" + author + '\'' +
-                ", anoPublicacao=" + yearPublished +
-                ", estado=" + status +
-                ", quantidadeDisponivel=" + availableQuantity +
-                '}';
+    public String getTitle() {
+        return title;
     }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public int getYearPublished() {
+        return yearPublished;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
 }
