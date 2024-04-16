@@ -1,9 +1,9 @@
 
 import java.util.Scanner;
 
-import Biblioteca.Funcionario;
-import Biblioteca.Livro;
-import Biblioteca.Usuario;
+import biblioteca.Funcionario;
+import biblioteca.Usuario;
+import biblioteca.Livro;
 
 public class Main {
 
@@ -36,7 +36,6 @@ public class Main {
             }
 
         }
-        read.close();
     }
 
     public static void menuFuncionario() {
@@ -50,7 +49,6 @@ public class Main {
         switch (opcao) {
             case 6:
                 System.out.println("Cadastro Funcionario");
-
                 System.out.println("Qual o nome ?");
                 String nome = read.nextLine();
                 System.out.println("Qual o id ?");
@@ -70,7 +68,6 @@ public class Main {
                 System.out.println("Qual o id ?");
                 int id1 = read.nextInt();
                 read.nextLine();
-
                 Usuario usuario = new Usuario(nome1, id1);
                 System.out.println("Cadastro realizado");
                 System.out.println("Nome:" + usuario.getNome() + "ID:" + usuario.getIdUsuario() + "Lista de livros:"
@@ -91,7 +88,7 @@ public class Main {
 
                 Livro novoLivro = new Livro(titulo, autor, ano);
 
-                System.out.println("Qual o status do livro ?\n0-Disponivel\n1-Emprestado\n2-Reservado\n4-Exemplar");
+                System.out.println("Qual o status do livro\n0-Disponivel\n1-Emprestado\n2-Reservado\n4-Exemplar");
                 int status = read.nextInt();
                 read.nextLine();
                 novoLivro.setEstado(status);
@@ -104,8 +101,6 @@ public class Main {
 
                 break;
         }
-
-        read.close();
 
     }
 
