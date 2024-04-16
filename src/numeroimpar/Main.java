@@ -1,4 +1,4 @@
-package Numero_Impar;
+package numeroimpar;
 
 import java.util.Scanner;
 

@@ -1,6 +1,6 @@
-package Biblioteca;
+package biblioteca;
 
-//import java.util.ArrayList;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Usuario {
@@ -12,6 +12,7 @@ public class Usuario {
     public Usuario(String nome, int idUsuario) {
         this.nome = nome;
         this.idUsuario = idUsuario;
+        this.listaLivros = new ArrayList<>();
 
     }
 

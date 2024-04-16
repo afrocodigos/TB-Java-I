@@ -1,3 +1,4 @@
+package brincandocomnumeros;
 
 import java.util.Scanner;
 

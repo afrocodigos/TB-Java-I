@@ -1,4 +1,4 @@
-package Classificar_Triangulo;
+package classificartriangulo;
 
 public class Triangulo {
 
