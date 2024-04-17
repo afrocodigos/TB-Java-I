@@ -78,10 +78,21 @@ public class Livro {
     }
 
     public void listarLivros() {
-        System.out.println("Lista de Livros: ");
-        for (Livro livro : listaLivros) {
-            System.out.println("ID: " + livro.getIdLivro() + ", Titulo " + livro.getTitulo());
+        if (listaLivros.isEmpty()) {
+            System.out.println("Lista vazia");
+
+        } else {
+            System.out.println("Lista de Livros: ");
+            for (int i = -1; i < listaLivros.size(); i++) {
+                System.out.println(listaLivros.get(i));
+            }
+
+            // for (Livro livro : listaLivros) {
+            // System.out.println("ID: " + livro.getIdLivro() + ", Titulo " +
+            // livro.getTitulo());
+            // }
         }
+
     }
 
     public void setEstado(int estado) {
@@ -98,7 +109,7 @@ public class Livro {
 
     @Override
     public String toString() {
-        return "Livro [idLivro:" + idLivro + "titulo=" + titulo + ", autor=" + autor + ", anoPublicacao="
+        return "Livro [idLivro:" + idLivro + ", titulo=" + titulo + ", autor=" + autor + ", anoPublicacao="
                 + anoPublicacao + ", estado="
                 + estado + "]";
     }
