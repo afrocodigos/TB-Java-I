@@ -78,7 +78,7 @@ public class Livro {
     }
 
     public void listarLivros() {
-        System.out.println("Lista de Livros:");
+        System.out.println("Lista de Livros: ");
         for (Livro livro : listaLivros) {
             System.out.println("ID: " + livro.getIdLivro() + ", Titulo " + livro.getTitulo());
         }
