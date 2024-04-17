@@ -1,22 +1,35 @@
-package biblioteca;
+package biblioteca.entity;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Livro {
-
+    private int idLivro;
     private String titulo;
     private String autor;
     private int anoPublicacao;
     private String estado;
     private List<Livro> listaLivros;
 
-    public Livro(String titulo, String autor, int anoPublicacao) {
+    public Livro(int idLivro, String titulo, String autor, int anoPublicacao) {
+        this.idLivro = idLivro;
         this.titulo = titulo;
         this.autor = autor;
         this.anoPublicacao = anoPublicacao;
         this.listaLivros = new ArrayList<>();
 
+    }
+
+    public Livro() {
+
+    }
+
+    public int getIdLivro() {
+        return idLivro;
+    }
+
+    public void setIdLivro(int idLivro) {
+        this.idLivro = idLivro;
     }
 
     public String getTitulo() {
@@ -59,6 +72,18 @@ public class Livro {
         this.listaLivros = listaLivros;
     }
 
+    public void cadastrarLivro(Livro livro) {
+        listaLivros.add(livro);
+
+    }
+
+    public void listarLivros() {
+        System.out.println("Lista de Livros:");
+        for (Livro livro : listaLivros) {
+            System.out.println("ID: " + livro.getIdLivro() + ", Titulo " + livro.getTitulo());
+        }
+    }
+
     public void setEstado(int estado) {
         if (estado == 0) {
             this.estado = "disponivel";
@@ -71,9 +96,11 @@ public class Livro {
         }
     }
 
-    public void cadastrarLivro(Livro livro) {
-        listaLivros.add(livro);
-
+    @Override
+    public String toString() {
+        return "Livro [idLivro:" + idLivro + "titulo=" + titulo + ", autor=" + autor + ", anoPublicacao="
+                + anoPublicacao + ", estado="
+                + estado + "]";
     }
 
 }
