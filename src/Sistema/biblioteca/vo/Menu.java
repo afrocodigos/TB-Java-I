@@ -57,18 +57,20 @@ public class Menu {
 
     }
 
+    Livro livro = new Livro();
+
     public void menuLivro() {
         Scanner read = new Scanner(System.in);
         System.out.println("----------------------");
 
         System.out.println("Menu Livros");
-        System.out.println("1-Cadastro livro\n2-Emprestar Livro\n3-Devolver Livro");
+        System.out.println("1-Cadastro livro\n2-Emprestar Livro\n3-Devolver Livro\n4-Sair");
         System.out.println("----------------------");
 
         int opcao = read.nextInt();
         read.nextLine();
 
-        Livro livro = new Livro();
+        boolean condicao = true;
 
         switch (opcao) {
             case 1:
@@ -97,14 +99,18 @@ public class Menu {
 
                 livro.cadastrarLivro(livro);
                 System.out.println(livro.toString());
-
                 break;
             case 2:
-                livro.listarLivros();
+                Livro livro1 = new Livro();
+
+                livro1.listarLivros();
                 System.out.println("Qual o codigo do livro ?");
 
                 break;
             case 3:
+
+                break;
+            case 4:
 
                 break;
 
@@ -117,8 +123,24 @@ public class Menu {
     }
 
     public void menuUsuario() {
-        // System.out.println("Menu Usuário");
-        // System.out.println("3-Emprestar\n4-Cadastrar\n5-Estado Livro");
+        Scanner read = new Scanner(System.in);
+        System.out.println("Menu Usuário");
+        System.out.println("1-Emprestar\n2-Devolver");
+        int opcao = read.nextInt();
+        boolean condicao = true;
+        switch (opcao) {
+            case 1:
+                System.out.println("Emprestar livro");
+
+                break;
+            case 2:
+                System.out.println("Devolver livro");
+                break;
+
+            default:
+                System.out.println("opção invalida");
+                break;
+        }
 
     }
 

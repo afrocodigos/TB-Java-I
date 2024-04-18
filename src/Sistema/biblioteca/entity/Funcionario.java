@@ -11,7 +11,7 @@ public class Funcionario {
     public Funcionario(String nome, int id) {
         this.nome = nome;
         this.id = id;
-        listaFuncionario = new ArrayList<>();
+        this.listaFuncionario = new ArrayList<>();
     }
 
     public String getNome() {

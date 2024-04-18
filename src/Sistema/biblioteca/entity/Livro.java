@@ -74,23 +74,17 @@ public class Livro {
 
     public void cadastrarLivro(Livro livro) {
         listaLivros.add(livro);
-
+        System.out.println("livro adicionado a lista");
     }
 
     public void listarLivros() {
-        if (listaLivros.isEmpty()) {
-            System.out.println("Lista vazia");
-
-        } else {
-            System.out.println("Lista de Livros: ");
-            for (int i = -1; i < listaLivros.size(); i++) {
-                System.out.println(listaLivros.get(i));
+        if (!listaLivros.isEmpty()) {
+            for (Livro livro : listaLivros) {
+                System.out.println("id: " + livro.getIdLivro() + " Titulo: " + livro.getTitulo());
             }
 
-            // for (Livro livro : listaLivros) {
-            // System.out.println("ID: " + livro.getIdLivro() + ", Titulo " +
-            // livro.getTitulo());
-            // }
+        } else {
+            System.out.println("Lista de livros vazia ");
         }
 
     }
