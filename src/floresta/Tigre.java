@@ -4,7 +4,7 @@ import floresta.Animal;
 public class Tigre extends Animal {
     @Override
     public void emitirSom() {
-        System.out.println("Tigre fazendo barulho");
+        System.out.println("RoarRrrrRrRrRrRr");
     }
 }
 
