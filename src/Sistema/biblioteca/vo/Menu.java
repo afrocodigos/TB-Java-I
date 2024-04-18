@@ -101,9 +101,8 @@ public class Menu {
                 System.out.println(livro.toString());
                 break;
             case 2:
-                Livro livro1 = new Livro();
 
-                livro1.listarLivros();
+                livro.listarLivros();
                 System.out.println("Qual o codigo do livro ?");
 
                 break;
