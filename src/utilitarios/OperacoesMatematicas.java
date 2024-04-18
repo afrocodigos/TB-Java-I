@@ -9,5 +9,3 @@ public class OperacoesMatematicas {
         return soma / numeros.length;
     }
 }
-
-//OperacoesMatematicas.calcularMedia(notaDosAlunos)
