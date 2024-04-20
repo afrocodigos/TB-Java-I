@@ -6,12 +6,16 @@ import java.util.List;
 public class Funcionario {
     private String nome;
     private int id;
-    private List<Funcionario> listaFuncionario;
+    private List<Funcionario> listaFuncionario = new ArrayList<>();
 
     public Funcionario(String nome, int id) {
         this.nome = nome;
         this.id = id;
-        this.listaFuncionario = new ArrayList<>();
+
+    }
+
+    public Funcionario() {
+
     }
 
     public String getNome() {
@@ -49,7 +53,8 @@ public class Funcionario {
 
     }
 
-    public void gerenciarOperacoes(Livro livro) {
+    public void gerenciarOperacoes(int codigo) {
+
         // gerencia as operações de emprestimo e devolução
 
     }

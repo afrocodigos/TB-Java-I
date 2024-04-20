@@ -9,14 +9,13 @@ public class Livro {
     private String autor;
     private int anoPublicacao;
     private String estado;
-    private List<Livro> listaLivros;
+    private List<Livro> listaLivros = new ArrayList<>();
 
     public Livro(int idLivro, String titulo, String autor, int anoPublicacao) {
         this.idLivro = idLivro;
         this.titulo = titulo;
         this.autor = autor;
         this.anoPublicacao = anoPublicacao;
-        this.listaLivros = new ArrayList<>();
 
     }
 
@@ -79,12 +78,46 @@ public class Livro {
 
     public void listarLivros() {
         if (!listaLivros.isEmpty()) {
-            for (Livro livro : listaLivros) {
-                System.out.println("id: " + livro.getIdLivro() + " Titulo: " + livro.getTitulo());
+            for (int i = 0; i < listaLivros.size(); i++) {
+                System.out.println(listaLivros.toString());
             }
 
         } else {
             System.out.println("Lista de livros vazia ");
+        }
+
+    }
+
+    public void emprestarLivro(int idLivro) {
+
+        for (int i = 0; i < listaLivros.size(); i++) {
+            Livro livro = listaLivros.get(i);
+            if (livro.getIdLivro() == idLivro) {
+                if (livro.getEstado().trim().equals("disponivel")) {
+                    livro.setEstado(1);
+                    System.out.println(livro.toString());
+                } else {
+                    System.out.println("Não foi possivel realizar operação livro não disponivel");
+                }
+
+            }
+
+        }
+
+    }
+
+    public void devolverLivro(int idLivroEmprestado) {
+
+        for (int i = 0; i < listaLivros.size(); i++) {
+            Livro livro = listaLivros.get(i);
+
+            if (livro.getIdLivro() == idLivroEmprestado) {
+                if (livro.getEstado().trim().equals("emprestado")) {
+                    livro.setEstado(1);
+                    System.out.println(livro.toString());
+                }
+
+            }
         }
 
     }

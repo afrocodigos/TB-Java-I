@@ -8,12 +8,11 @@ public class Usuario {
     private String nome;
     private int idUsuario;
     private List<String> listaLivros;
-    private List<Usuario> listaUsuarios;
+    private List<Usuario> listaUsuarios = new ArrayList<>();
 
     public Usuario(String nome, int idUsuario) {
         this.nome = nome;
         this.idUsuario = idUsuario;
-        this.listaLivros = new ArrayList<>();
 
     }
 

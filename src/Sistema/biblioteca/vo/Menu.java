@@ -7,8 +7,10 @@ import biblioteca.entity.Livro;
 import biblioteca.entity.Usuario;
 
 public class Menu {
+    Funcionario funcionario = new Funcionario();
+    Scanner read = new Scanner(System.in);
+
     public void menuFuncionario() {
-        Scanner read = new Scanner(System.in);
         System.out.println("----------------------");
         System.out.println("Menu Funcionário");
         System.out.println("1-Cadastro Funcionario\n2-Cadastro Usuario\n3-Menu Livros");
@@ -26,7 +28,7 @@ public class Menu {
                 int id = read.nextInt();
                 read.nextLine();
 
-                Funcionario funcionario = new Funcionario(nome, id);
+                funcionario = new Funcionario(nome, id);
                 funcionario.adicionarFuncionario(funcionario);
                 System.out.println("Cadastro realizado");
                 System.out.println(funcionario.toString());
@@ -60,18 +62,17 @@ public class Menu {
     Livro livro = new Livro();
 
     public void menuLivro() {
-        Scanner read = new Scanner(System.in);
+
         System.out.println("----------------------");
 
         System.out.println("Menu Livros");
-        System.out.println("1-Cadastro livro\n2-Emprestar Livro\n3-Devolver Livro\n4-Sair");
+        System.out.println("1-Cadastro livro\n2-Emprestar Livro\n3-Devolver Livro");
         System.out.println("----------------------");
 
         int opcao = read.nextInt();
         read.nextLine();
 
-        boolean condicao = true;
-
+        int codigo = 0;
         switch (opcao) {
             case 1:
 
@@ -101,15 +102,16 @@ public class Menu {
                 System.out.println(livro.toString());
                 break;
             case 2:
-
-                livro.listarLivros();
-                System.out.println("Qual o codigo do livro ?");
+                emprestarLivro();
 
                 break;
             case 3:
-
-                break;
-            case 4:
+                System.out.println("---Operação Devolver livro---");
+                livro.listarLivros();
+                System.out.println("Qual o codigo do livro ?");
+                codigo = read.nextInt();
+                read.nextLine();
+                livro.devolverLivro(codigo);
 
                 break;
 
@@ -121,19 +123,28 @@ public class Menu {
 
     }
 
+    public void emprestarLivro() {
+        int codigo;
+
+        livro.listarLivros();
+        System.out.println("Qual o codigo do livro ?");
+        codigo = read.nextInt();
+        read.nextLine();
+        livro.emprestarLivro(codigo);
+
+    }
+
     public void menuUsuario() {
-        Scanner read = new Scanner(System.in);
         System.out.println("Menu Usuário");
-        System.out.println("1-Emprestar\n2-Devolver");
+        System.out.println("1-Emprestar\n2-Lista de livros emprestados");
         int opcao = read.nextInt();
-        boolean condicao = true;
         switch (opcao) {
             case 1:
                 System.out.println("Emprestar livro");
-
+                emprestarLivro();
                 break;
             case 2:
-                System.out.println("Devolver livro");
+                System.out.println("Lista de livro emprestados");
                 break;
 
             default:
