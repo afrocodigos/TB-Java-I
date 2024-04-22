@@ -1,4 +1,4 @@
-public class funcionarios {
+public class funcionarios1 {
 
     static String nomeFuncionario = "José da Silva";
     static String cargoFuncionario = "Analista de dados";
