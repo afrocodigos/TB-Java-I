@@ -1,0 +1,63 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Sistema",
+            "request": "launch",
+            "mainClass": "empresa.Sistema",
+            "projectName": "TB-Java-I_93cdfa94"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Funcionario",
+            "request": "launch",
+            "mainClass": "Funcionario",
+            "projectName": "TB-Java-I_93cdfa94"
+        },
+        {
+            "type": "java",
+            "name": "Sistema",
+            "request": "launch",
+            "mainClass": "Sistema",
+            "projectName": "TB-Java-I_93cdfa94"
+        },
+        {
+            "type": "java",
+            "name": "Aluno",
+            "request": "launch",
+            "mainClass": "aluno.Aluno",
+            "projectName": "TB-Java-I_93cdfa94"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "aluno.App",
+            "projectName": "TB-Java-I_93cdfa94"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "desafio2.Main",
+            "projectName": "TB-Java-I_93cdfa94"
+        },
+        {
+            "type": "java",
+            "name": "Main(1)",
+            "request": "launch",
+            "mainClass": "desafiofuncionario.Main",
+            "projectName": "TB-Java-I_93cdfa94"
+        }
+    ]
+}
