@@ -1,10 +1,10 @@
-package biblioteca.vo;
+package vo;
 
 import java.util.Scanner;
 
-import biblioteca.entity.Funcionario;
-import biblioteca.entity.Livro;
-import biblioteca.entity.Usuario;
+import entity.Funcionario;
+import entity.Livro;
+import entity.Usuario;
 
 public class Menu {
     Funcionario funcionario = new Funcionario();

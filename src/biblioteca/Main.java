@@ -1,10 +1,10 @@
 
 import java.util.Scanner;
 
-import biblioteca.entity.Funcionario;
-import biblioteca.entity.Livro;
-import biblioteca.entity.Usuario;
-import biblioteca.vo.Menu;
+import entity.Funcionario;
+import entity.Livro;
+import entity.Usuario;
+import vo.Menu;
 
 public class Main {
 
