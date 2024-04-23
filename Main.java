@@ -9,6 +9,9 @@ public class Main {
         double promocaoAdm = administrativo.promover();
         double promocaoGerente = gerente.promover();
         double prmocaoDiretor = diretor.promover();
+        double totalAdm = administrativo.calcularSalario();
+        double totalGerente = gerente.calcularSalario();
+        double totalDiretor = diretor.calcularSalario();
 
         FuncionarioGeral[] funcionarioGerais = { administrativo, gerente, diretor };
 
@@ -20,23 +23,21 @@ public class Main {
         }
         System.out.println("Maiores detalhes:");
 
-        System.out.println(administrativo.getNome() + " exerce o cargo administrativo e recebe bonus de "
-                + administrativo.getBonus()
-                + " , comissão de " + administrativo.getComissao() + " , décimo terceiro sobre salario de "
-                + administrativo.getDecimoTerceiro() + " e seu nivel atual de senioridade é "
-                + administrativo.getSenioridade() + ". Além disso, foi promovida e sua nova remuneração sera de: "
+        System.out.println(administrativo.getNome() + " exerce o cargo administrativo e recebe remuneração mensal "
+                + totalAdm + " e seu nivel atual de senioridade é "
+                + administrativo.getSenioridade()
+                + ". Além disso, foi promovida para Pleno e sua nova remuneração sera de: "
                 + promocaoAdm + "!");
 
         System.out.println(gerente.getNome() + " exerce o cargo de gerente e comanda um total de "
-                + gerente.getQntEquipes() + " equipes,"
-                + " , seu PLR será pago no valor de " + gerente.getPlr() + " , décimo terceiro sobre salario de "
-                + gerente.getDecimoTerceiro() + ". Também foi promovida e sua nova remuneração sera de: "
+                + gerente.getQntEquipes() + " equipes"
+                + " , sua remuneração mensal é de " + totalGerente
+                + ". Foi promovida e sua nova remuneração sera de: "
                 + promocaoGerente + "!");
 
         System.out.println(
-                diretor.getNome() + " exerce o cargo de diretor(a) da companhia, recebe bonificação anual no valor de "
-                        + diretor.getBonificacaoAnual()
-                        + " , seu PLR será pago no valor de " + diretor.getPlr()
+                diretor.getNome() + " exerce o cargo de diretor(a) da companhia, e sua remuneração mensal é de "
+                        + totalDiretor
                         + ". Assume o cargo de presidente e sua nova remuneração sera de: " + prmocaoDiretor + "!");
     }
 }
