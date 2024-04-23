@@ -1,3 +1,5 @@
+package aluno;
+
 import java.util.Scanner;
 
 import aluno.*;
