@@ -25,4 +25,3 @@ public class Gerente extends Funcionario {
         return getSalario() + bonus;
     }
 }
-}
