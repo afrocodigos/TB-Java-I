@@ -1,5 +1,5 @@
 package floresta;
 
 public abstract class Animal {
-    public abstract void emitirSom();
+    public abstract void emitirSom(String barulho);
 }
