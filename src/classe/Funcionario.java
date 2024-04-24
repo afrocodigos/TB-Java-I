@@ -9,7 +9,7 @@ public class Funcionario {
     public Date dataDeNascimento;
     public String endereco;
     public String departamento;
-    public double salario;
+    protected double salario;
 
     // métodos - construtor e normais
     public Funcionario(String nome, Date dataDeNascimento, String endereco, String departamento, double salario) {
@@ -29,6 +29,12 @@ public class Funcionario {
         
     }
 
+    public double getSalario() {
+        return salario;
+    }
 
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
 
 }

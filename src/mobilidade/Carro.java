@@ -31,12 +31,3 @@ public class Carro {
         return contadorDeCarro;
     }
 }
-
-//Carro mobi = new Carro()
-//mobi.parar() - convencional
-
-
-//Carro.getContadorDeCarro() - chamando um método estático
-
-// Carro honda = new Carro()
-// honda.acelerar()
