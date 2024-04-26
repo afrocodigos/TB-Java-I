@@ -23,6 +23,13 @@ public class Diretor extends Funcionario {
     public double calcularSalario() {
         // Salário do diretor é o salário base mais a participação nos lucros
         return getSalario() + participacaoLucros;
+      
+    }
+    
+    public double calcularBonusAnual() {
+    	
+    	return participacaoLucros * 0.2;
+    	
     }
     
 }
