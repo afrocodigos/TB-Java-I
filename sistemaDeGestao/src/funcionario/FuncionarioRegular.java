@@ -2,8 +2,8 @@ package funcionario;
 
 public class FuncionarioRegular extends Funcionario {
 
-	public FuncionarioRegular(String nome, int idade, double salario) {
-		super(nome, idade, salario);
+	public FuncionarioRegular(String nome, int idade, double salario, String departamento) {
+		super(nome, idade, salario, "Funcionário Regular", departamento);
 		
 	}
 	
@@ -12,5 +12,10 @@ public class FuncionarioRegular extends Funcionario {
 		return getSalario();
 	}
 
+	public double calcularBonus() {
+		
+		return 0.05 * getSalario();
+		
+	}
 }
 
