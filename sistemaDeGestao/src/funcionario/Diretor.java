@@ -4,8 +4,9 @@ public class Diretor extends Funcionario {
 	
 	private double participacaoLucros;
 	
-	public Diretor(String nome, int idade, double salario, double participacaoLucros) {
-        super(nome, idade, salario);
+	public Diretor(String nome, int idade, double salario,String departamento, double participacaoLucros) {
+        super(nome, idade, salario,"Diretor", departamento);
+        
         this.participacaoLucros = participacaoLucros;
 	}
 	
