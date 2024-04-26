@@ -3,9 +3,9 @@ package funcionario;
 public class Gerente extends Funcionario {
 	
 	private double bonus;
-	
-	public Gerente(String nome, int idade, double salario, double bonus) {
-        super(nome, idade, salario);
+		
+	public Gerente(String nome, int idade, double salario, String departamento, double bonus) {
+        super(nome, idade, salario,"Gerente", departamento);
         this.bonus = bonus;
     }
 
@@ -16,6 +16,10 @@ public class Gerente extends Funcionario {
 
     public void setBonus(double bonus) {
         this.bonus = bonus;
+    }
+    
+    public double calcularBonusAnual() {
+    	return bonus * 12;
     }
 
     // Sobrescrita do método calcularSalario()
